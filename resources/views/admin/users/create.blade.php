@@ -8,6 +8,14 @@
 	{!! Form::open(['method' => 'POST','action'=>'AdminUsersController@store']) !!}
     
     <table>
+        <tr>
+            <td>
+                {!! Form::label('ruta_foto', 'Foto') !!}   
+            </td>
+            <td>
+                {!! Form::file('ruta_foto') !!}       
+            </td>
+        </tr>
     	<tr>
     		<td>
     			{!! Form::label('role_id', 'Rol') !!}   
