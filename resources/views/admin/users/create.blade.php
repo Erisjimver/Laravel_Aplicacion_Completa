@@ -5,7 +5,7 @@
 </head>
 <body>
 	<h1>Create Page</h1>
-	{!! Form::open(['url' => 'foo/bar']) !!}
+	{!! Form::open(['method' => 'POST','action'=>'AdminUsersController@store']) !!}
     
     <table>
     	<tr>
@@ -13,15 +13,15 @@
     			{!! Form::label('role_id', 'Rol') !!}   
     		</td>
     		<td>
-    			{!! Form::text('role') !!}    			
+    			{!! Form::text('role_id') !!}    			
     		</td>
     	</tr>
     	<tr>
     		<td>
-    			{!! Form::label('nombre', 'Nombre') !!}   
+    			{!! Form::label('username', 'Nombre') !!}   
     		</td>
     		<td>
-    			{!! Form::text('username') !!}    			
+    			{!! Form::text('name') !!}    			
     		</td>
     	</tr>
     	<tr>
@@ -37,7 +37,7 @@
     			{!! Form::label('v_email', 'Verificar Email') !!}   
     		</td>
     		<td>
-    			{!! Form::text('v_email') !!}    			
+    			{!! Form::text('email_verified_at') !!}    			
     		</td>
     	</tr>
     	<tr>
@@ -48,6 +48,14 @@
     			{!! Form::password('password', ['class' => 'awesome']) !!}    			
     		</td>
     	</tr>
+        <tr>
+            <td>
+                {!! Form::submit('Crear usuario') !!}   
+            </td>
+            <td>
+                {!! Form::reset('Borrar') !!}              
+            </td>
+        </tr>
     </table>
 
 

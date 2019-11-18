@@ -17,4 +17,9 @@ class AdminUsersController extends Controller
     public function create(){
     	return view('admin.users.create');
     }
+
+    public function store(Request $request){
+    	User::create($request->all());
+    	//return $request->all();
+    }
 }
