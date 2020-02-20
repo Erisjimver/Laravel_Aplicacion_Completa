@@ -11,6 +11,7 @@
 		<!--Encabezado -->
 		<tr>
 			<th>ID</th>
+			<th>Foto:</th>
 			<th>Rol ID</th>
 			<th>Nombre</th>
 			<th>E-mail</th>
@@ -23,6 +24,7 @@
 		
 		<tr>
 			<td>{{$user->id}}</td>
+			<td><img src="/images/{{$user->foto->ruta_foto}}"/></td>
 			<td>{{$user->role_id}}</td>
 			<td>{{$user->name}}</td>
 			<td>{{$user->email}}</td>

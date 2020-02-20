@@ -5,15 +5,15 @@
 </head>
 <body>
 	<h1>Create Page</h1>
-	{!! Form::open(['method' => 'POST','action'=>'AdminUsersController@store']) !!}
+	{!! Form::open(['method' => 'POST','action'=>'AdminUsersController@store', 'files'=>true]) !!}
     
     <table>
         <tr>
             <td>
-                {!! Form::label('ruta_foto', 'Foto') !!}   
+                {!! Form::label('foto_id', 'Foto') !!}   
             </td>
             <td>
-                {!! Form::file('ruta_foto') !!}       
+                {!! Form::file('foto_id') !!}       
             </td>
         </tr>
     	<tr>
