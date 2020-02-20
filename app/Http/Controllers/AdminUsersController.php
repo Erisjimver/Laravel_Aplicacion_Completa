@@ -34,5 +34,6 @@ class AdminUsersController extends Controller
         }
         $entrada['password']=bcrypt($request->password);
         User::create($entrada);
+        return redirect('/admin/users');
     }
 }
