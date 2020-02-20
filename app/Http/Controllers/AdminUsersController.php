@@ -36,4 +36,11 @@ class AdminUsersController extends Controller
         User::create($entrada);
         return redirect('/admin/users');
     }
+
+    public function edit($id){
+
+        $user=User::findOrFail($id);
+
+        return view ('admin.users.edit', compact('user'));
+    }
 }

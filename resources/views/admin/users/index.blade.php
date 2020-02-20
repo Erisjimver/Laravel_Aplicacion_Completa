@@ -27,10 +27,10 @@
 			@if($user->foto)
 			<td><img src="/images/{{$user->foto->ruta_foto}}" width="50px" /></td>
 			@else
-			<td>No hay foto</td>
+			<td><img src="/images/usuarios.png" width="50px"></td>
 			@endif
 			<td>{{$user->role_id}}</td>
-			<td>{{$user->name}}</td>
+			<td><a href="{{route('users.edit', $user->id)}}">{{$user->name}}</a></td>
 			<td>{{$user->email}}</td>
 			<td>{{$user->created_at}}</td>
 			<td>{{$user->updated_at}}</td>
