@@ -71,6 +71,7 @@
             <td>
                 {!! Form::reset('Borrar') !!}              
             </td>
+            
         </tr>
     </table>
 
@@ -78,6 +79,14 @@
 
 
 	{!! Form::close() !!}
+
+    {!! Form::model($user,['method' => 'DELETE','action'=>['AdminUsersController@destroy',$user->id]]) !!}
+            
+
+         {!! Form::submit('Eliminar Usuario') !!}              
+
+    {!! Form::close() !!}
+
 
 </body>
 </html>
